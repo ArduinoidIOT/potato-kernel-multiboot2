@@ -14,9 +14,3 @@ start:
 section .bss
 resb 8192                        ;8KB for stack
 stack_space:
-
-section .data
-cpu_vendor: 
-db "CPU vendor: "
-cpu_info:
-resb 12

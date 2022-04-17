@@ -4,7 +4,7 @@
 
 CPPFLAGS=
 CFLAGS=
-asmobjects = boot.o multiboot.o
+asmobjects = boot.o multiboot2.o
 hppfiles = 
 cppfiles = main.o
 cfiles = 
