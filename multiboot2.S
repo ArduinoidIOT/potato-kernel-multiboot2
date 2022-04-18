@@ -1,0 +1,10 @@
+#define MAGIC 0xE85250D6
+#define ARCHITECTURE 0x00
+#define HEADERLEN 16
+#define CHECKSUM - (MAGIC + ARCHITECTURE + HEADERLEN)
+
+.section .multiboot2
+.long MAGIC
+.long ARCHITECTURE
+.long HEADERLEN
+.long CHECKSUM
