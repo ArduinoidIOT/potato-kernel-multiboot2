@@ -1,0 +1,11 @@
+bits 32
+%define MAGIC 0xE85250D6
+%define ARCHITECTURE 0x00
+%define HEADERLEN 16
+%define CHECKSUM - (MAGIC + ARCHITECTURE + HEADERLEN)
+
+section .multiboot2
+dd MAGIC 
+dd ARCHITECTURE
+dd HEADERLEN
+dd CHECKSUM

@@ -21,9 +21,8 @@ $(hppfiles): %.o: %.cpp %.hpp
 $(cppfiles): %.o: %.cpp
 	@i686-elf-g++ -c $< -o $@ $(CPPFLAGS)
 
-$(asmobjects): %.o: %.S
-	# @nasm -f elf32 $< -o $@
-	@i686-elf-gcc -c $< -o $@
+$(asmobjects): %.o: %.asm
+	@nasm -f elf32 $< -o $@
 
 $(cfiles): %.o: %.c
 	@i686-elf-gcc -c $< -o $@ $(CFLAGS)
