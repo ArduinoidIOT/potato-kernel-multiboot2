@@ -1,14 +1,17 @@
 bits 32
+default rel
 
 section .text
-extern main
+extern kernel_main
 global start
 
 start:
         cli                      ;block interrupt
         mov esp, stack_space     ;set stack pointer
-        call main
-        hlt                    ;halt the CPU
+        push ebx
+        push eax
+        call kernel_main
+        hlt
 
 
 section .bss

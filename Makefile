@@ -6,8 +6,8 @@ CPPFLAGS=
 CFLAGS=
 asmobjects = boot.o multiboot2.o
 hppfiles = 
-cppfiles = main.o
-cfiles = 
+cppfiles =
+cfiles = main.o
 objects = $(hppfiles) $(cppfiles) $(asmobjects) $(cfiles)
 
 all: iso
